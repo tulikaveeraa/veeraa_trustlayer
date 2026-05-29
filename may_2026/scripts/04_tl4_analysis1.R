@@ -145,4 +145,4 @@ write_xlsx(
   "output/tl4_tables.xlsx"
 )
 
-
+write_rds(tl4_analysis, "data/tl4_analysis2.rds")
