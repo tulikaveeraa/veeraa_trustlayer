@@ -1,0 +1,386 @@
+variable,label,
+start,,
+end,,
+today,,
+username,,
+deviceid,,
+phonenumber,,
+audit,,
+meta_data,,
+surveyor,Name of Surveyor,
+unique_id,Enter CMID of Community Member ,
+invalid_id,⚠️ CMID not found. Please check and re-enter.,
+show_details,"Respondent: ${community_member} 
+Organisation: ${org_name} 
+Contact Person: ${contact_name} 
+Veeraa Leader: ${leader_name}
+Phone Number: ${phone_number}
+Phone Belongs to: ${phone_belongs}
+Activity Name: ${activity_name}
+Area: ${urban_rural}
+Work: ${descr_of_work}",
+call_attempt,Call Attempt Number,
+call_status ,Status of call,
+main_survey ,Survey Starts,
+confirm_respondent,1. Hello am I speaking to ${community_member}?,
+give_phone ,1.1 Can you please give the phone to ${community_member}?,
+have_correct_number,1.2 Do you have their number or a number of their family member?,
+end_survey_wrongno,"Okay, sorry for disturbing you. Thank you",
+correct_number,1.3 Please share their correct number with me ,
+end_survey_correctno,Thank you for sharing their number. Bye,
+availabletotalk,2. Are you available to talk now?,
+callbackconsent,2.1. Can I call you back?,
+know_vl,"3.1 To confirm, do you know ${leader_name}?",
+know_org,3.2 Do you know ${org_name}?,
+know_contact,3.3 Do you know ${contact_name}?,
+dontknowvl,"3.4 Are you sure? As per our information, ${leader_name}, ${contact_name}, ${org_name} works on ${descr_of_work} in your community. Have you ever engaged with anyone around this area of work? ",
+name_contact,3.4.1 Who leads this work? Please tell their name,
+note_for_surveyor,"[FOR SURVEYOR] Please use the name of ${name_contact} in all future questions instead of ${leader_name}, ${contact_name}, ${org_name}",
+clarify_respondent,3.4.2 Thank you for sharing. We will ask you questions about your experience with ${name_contact} on ${descr_of_work} going forward,
+consent,"4.1 If this sounds okay, can we proceed?   ",
+noconsent_surveyend,No worries. We will not continue with the survey. Thank you,
+survey_recorded,[FOR SURVEYOR] Does this survey need to be recorded?,
+consent_recording,"4.2 We are recording this survey so we can remember your responses, but will only continue with the recording if you give your consent. Are you okay with us recording? If not, we will stop the recording and proceed with the survey",
+respondent_gender,"5. [FOR SURVEYOR] Record sex of respondent. If not clear from voice or name, ask ",
+respondent_age,6. What is your age?,
+speak_to_adult,"6.1 Can we please speak to your parents or any other adult who can share more about your experience with ${leader_name}, ${contact_name}, ${org_name}?",
+adult_number,6.2. Please share their number,
+askforchild,"[SURVEYOR NOTE] For all future questions, ask them about their child's experiences. Change the questions based on this",
+confirm_panchayat,7.1 Is it correct that your panchayat name is ${panchayat_locality}?,
+correct_village,7.3 Can you share the correct name of your panchayat?,
+confirm_locality,7.1 Is it correct that your locality name is ${panchayat_locality}?,
+correct_locality,7.3 Can you share the correct name of your locality?,
+confirm_district,7.2 Is it correct your district name is ${district_city}?,
+correct_district,7.4 Can you share the correct name of your district?,
+confirm_city,7.2 Is it correct your city name is ${district_city}?,
+correct_city,7.4 Can you share the correct name of your city?,
+panchayat_name,7.1 Can you share the name of the panchayat you currently live in?,
+district_name,7.2 Can you share the name of the district you currently live in?,
+locality_name,7.1 Can you share the name of the locality you currently live in?,
+city_name,7.2 Can you share the name of the city you currently live in?,
+part_activity,"8. Have you ever participated in any activity conducted by ${leader_name}, ${contact_name}, ${org_name} or received support from them?",
+child_part_activity,"8. Has ${community_member} ever participated in any activity conducted by ${leader_name}, ${contact_name}, ${org_name} or received support from them?",
+family_participated,"9. Is there anyone else in your household or family who has participated in any activity or received support from them, such as a child, spouse, sibling? ",
+both_me_family,9.1 Please respond to the questions based on both your and your family member's experiences ,
+only_family,9.1 Please respond to the questions based on the experiences of your family members ,
+time_since_contact,"10. Roughly how many months has it been since you were last in touch with ${leader_name}, ${contact_name}, ${org_name} either in person or on the phone? ",
+active_community,,
+frequency_engagement,"11. On average, how frequently do you have contact with  ${leader_name}, ${contact_name} and their organisation in one year, either over the phone or in-person?",
+depth1,"12. I will read out some statements about your experience with ${leader_name}, ${contact_name}, ${org_name}. Please select a statement that best matches your experience. I will start reading now. Which statement do you agree with?",
+depth1_reason,12.1 Can you explain why?,
+impact_areas,"13. In what areas of your life has ${leader_name}, ${contact_name}, ${org_name} helped you? What benefits have you received (such as education, health, income, access to government schemes), but also what has changed in how you live your life (such as confidence, relationship with your community, freedom)?",
+impact_other,13.1 [FOR SURVEYOR] What are the other areas in which the Leader has supported them that is not covered in this list?,
+impact_educ,"14.1 Education and skilling 
+In what specific ways has ${leader_name}, ${contact_name}, ${org_name} helped you in the area of education and skilling? Please list in brief. ",
+educ_other,14.1.1 [FOR SURVEYOR] What are the other areas in which the Leader has supported them that is not covered in this list?,
+impact_aware,"14.2 Awareness and knowledge
+After linking up with ${leader_name}, ${contact_name}, ${org_name} on what topics do you consider yourself more aware? Please list in brief. ",
+aware_other,14.2.2. [FOR SURVEYOR] What are the other areas in which the Leader has supported them that is not covered in this list?,
+impact_health,"14.3 Health and Nutrition
+In what specific ways ${leader_name}, ${contact_name}, ${org_name} helped improve your or your family's health and nutrition? Please list in brief. ",
+health_other,14.3.1 [FOR SURVEYOR] What are the other areas in which the Leader has supported them that is not covered in this list?,
+impact_income,"14.4 Income or employment
+What change has occurred in your or your household's income or employment since joining ${leader_name}, ${contact_name}, ${org_name} 's Community? Please list in brief. ",
+income_other,14.4.1 [FOR SURVEYOR] What are the other areas in which the Leader has supported them that is not covered in this list?,
+impact_finance,"14.5 Financial access 
+In what specific ways has ${leader_name}, ${contact_name}, ${org_name} helped you in the area of savings, credit or financial access? Please list in brief. ",
+finance_other,14.5.1 [FOR SURVEYOR] What are the other areas in which the Leader has supported them that is not covered in this list?,
+impact_harm,"14.6 Protection from harm, violence discrimination
+In what specific ways has ${leader_name}, ${contact_name}, ${org_name} helped protect you or someone in your household from harm, violence or discrimination? Please list in brief. ",
+harm_other,14.6.1 [FOR SURVEYOR] What are the other areas in which the Leader has supported them that is not covered in this list?,
+impact_confidence_yn,"14.7 Confidence, freedom and leadership 
+Since joining ${leader_name}, ${contact_name}, ${org_name} do you feel more confident, free or capable of leading? ",
+impact_confidence,14.7.1 Can you elaborate on what has changed in your life?,
+confidence_other,14.7.2 [FOR SURVEYOR] What are the other areas in which the Leader has supported them that is not covered in this list?,
+impact_govt_access,"14.8 Access to rights, government schemes and justice
+
+In what specific ways has ${leader_name}, ${contact_name}, ${org_name} helped you or your household access government schemes, documents or legal rights? Please list in brief. ",
+govt_access_other,14.8.1 [FOR SURVEYOR] What are the other areas in which the Leader has supported them that is not covered in this list?,
+impact_water_land,"14.9 Access to water / land
+In what specific ways has ${leader_name}, ${contact_name}, ${org_name} helped you or your community get better access to water or land? Please list in brief. ",
+water_land_other,14.9.1 [FOR SURVEYOR] What are the other areas in which the Leader has supported them that is not covered in this list?,
+impact_belong,"14.10 Sense of belonging & community 
+Since joining ${leader_name}, ${contact_name}, ${org_name} 's community, do you feel more connected to the people around you? In what sense? Please list in brief. ",
+belong_other,14.10.1 [FOR SURVEYOR] What are the other areas in which the Leader has supported them that is not covered in this list?,
+impact_envir,"14.11 Environment and natural resources 
+In what specific ways has ${leader_name}, ${contact_name}, ${org_name} helped protect or improve the natural environment in your area? Please list in brief. ",
+envir_other,14.11.1 [FOR SURVEYOR] What are the other areas in which the Leader has supported them that is not covered in this list?,
+explain_scale,"15. I am now going to ask you a few questions, and I would like you to rate your experience on a scale of 1 to 5, much like how grades are given in school, where 1 is the worst and 5 is the best.
+Let me give you an example: imagine I were to ask you, ""How is your day going today?"" You would tell me: 1 means it is going extremely poorly; 2 means it is going somewhat poorly; 3 means it is neither good nor bad; 4 means it is going well; and 5 means it is going exceptionally well. So now you try. On a scale of 1 to 5, what rating would you give your day?",
+start_depth,"16. Now I will ask you the list of questions, and you must give your answer on the same scale of 1-5",
+depth2,"17. How much impact has ${leader_name}, ${contact_name}, ${org_name} had on your mental wellbeing and peace? Give a rating on 1-5",
+depth3,"18. Overall, how significant has ${leader_name}, ${contact_name}, ${org_name} 's impact been on the rest of the community? Give a rating on 1-5",
+depth4,"19. Out of everything that they have helped you with, what has been the most significant change in your life as a result of ${leader_name}, ${contact_name}, ${org_name} 's work? Please give only one response- the biggest, most important change. ",
+love1,"20. How likely are you to recommend ${leader_name}, ${contact_name}, ${org_name} 's work to your friends or family if they needed support? Give a rating on 1-5",
+low_nps,20.1 Why did you give this rating? Can you tell a bit more,
+love2,"21. To what extent do you trust the information and services provided and the work done by ${leader_name}, ${contact_name}, ${org_name}? Give a rating on 1-5",
+love3,"22. Has it ever happened that you were unhappy with the behavior of a ${leader_name}, ${contact_name} or another member of the organization, or that something they did or said upset you?",
+love3_yes,"22.1 If yes, can you tell me why?",
+intro_demographics,23. We have now reached the end of our survey. We wanted to ask you a few more personal questions about you and your background. ,
+educ_level ,24. What is your highest level of education that you completed?,
+smartphone,25. Do you or any member of your household own a smartphone?,
+share_contactinfo,"26. We want to speak with more people like you from this community to better understand the ${leader_name}, ${contact_name}, ${org_name} 's work and people's experience connecting with them.
+Would you be willing to share the name and phone number of up to 3 people in your community who also engage with the activities conducted by them?
+We will only reach out to them to ask the same questions as we have asked you, and will not share their number with anyone else.",
+share_now,26.1 Can you share that information with me now? I will note it down,
+whatsapp_no,26.2 Please can you send the information by SMS or WhatsApp? Here is our official number: 7411318383,
+nameperson1,Name of Person 1,
+numberperson1,Phone Number of Person 1 ,
+nameperson2,Name of Person 2,
+numberperson2,Phone Number of Person 2,
+nameperson3,Name of Person 3,
+numberperson3,Phone Number of Person 3,
+respondentcomments,27. Is there anything else you’d like to share about your experience of interacting with the leader? ,
+thankyou,Thank you for answering our questions. We have now reached the end of our survey. Please note that we wish to stay in touch with you and understand how your experiences have shaped and evolved over time. We may call you again in the future. ,
+dontknowvl_confirm,"Okay, sorry for disturbing you. Thank you",
+call_back_time,When can we call back?,
+survey_completion,[FOR SURVEYOR] Survey Completion Status,
+comments,"[FOR SURVEYOR] Please share any comments, feedback or data that has not been captured in the survey here.   ",
+correct_name,"If we are speaking to the correct community member, and the name in our database is wrong. Please enter the correct name here. ",
+main_survey ,Survey Ends,
+list_name,name,label::English (en)
+surveyor,ummey,Ummey Kulsum
+surveyor,jagriti,Jagriti Kumari
+surveyor,rani,Rani Munda
+surveyor,shobha,Shobha Patel
+surveyor,mohini,Mohini Singh
+surveyor,malay,Malay Halder
+surveyor,manosi,Manosi Halder
+surveyor,gunja,Gunja Sinha
+surveyor,tulika,Tulika Jain
+surveyor,sonakshi,Sonakshi Sharma
+yesno,yes,Yes
+yesno,no,No
+yesno,99,Survey left incomplete 
+call_status,answered,Someone picked up the phone
+call_status,no_answer,Phone rang but no one picked up
+call_status,outofservice,Phone was out of service or invalid
+give_phone,yes ,Yes
+give_phone,wrong_number,Wrong Number/Different Number
+give_phone,call_back,Call back later
+give_phone,dont_live_here,They don't live here anymore
+give_phone,selfcallback,Respondent will call us back
+completion_status,completed,Survey fully completed
+completion_status,halfway,Survey completed halfway (call got cut)
+completion_status,refused,Respondent refused to speak
+completion_status,call_back,Call back later 
+completion_status,diffnumber,Call back on a different number
+completion_status,wrongnumber,Wrong Number
+completion_status,notavailable,Respondent not available
+completion_status,belowage,Respondent was less than 16 years of age 
+completion_status,doesntknow,Respondent doesn't know the leader or their work
+completion_status,selfcallback,Respondent will call us back
+gender,female,Female
+gender,male ,Male
+gender,other ,Other
+participated,yes,Yes
+participated,no,No
+participated,98,Don't know/Don't remember
+participated,99,Survey left incomplete 
+familyparticipated,child,Yes- my child
+familyparticipated,spouse,Yes- my spouse
+familyparticipated,sibling,Yes- my sibling
+familyparticipated,other ,Yes- other 
+familyparticipated,no,No
+familyparticipated,98,Don't know/Don't remember
+familyparticipated,99,Survey left incomplete 
+frequency,1,Daily
+frequency,2,"More than once a week, but not everyday"
+frequency,3,Once a week
+frequency,4,Once a month
+frequency,5,2 - 3 times a month
+frequency,6,Once every 3 months or so
+frequency,7,A few times a year (more than 4 times)
+frequency,8,Once a year
+frequency,9,Ad hoc (I go when I need help/ I come when they call me)
+frequency,98,Don’t know/ don’t remember
+frequency,99,Survey left incomplete
+impactareas,educ,Education and skilling
+impactareas,aware,Awareness and knowledge
+impactareas,health,Health and nutrition
+impactareas,income,"Income, employment"
+impactareas,finance,Financial access
+impactareas,harm,"Protection from harm, violence discrimination"
+impactareas,confidence,"Confidence, freedom and leadership"
+impactareas,govt_access,"Access to rights, government schemes and justice"
+impactareas,water_land,Access to water or land
+impactareas,belong,Sense of belonging & community
+impactareas,envir,Environment and natural resources
+impactareas,other,Other 
+impactareas,98,Don't know/Don't remember
+impactareas,99,Survey left incomplete 
+scale1,1,1 - Very bad
+scale1,2,2 - Somewhat bad
+scale1,3,3 - Not good not bad
+scale1,4,4 - Good
+scale1,5,5 - Very good
+scale1,98,Don't know/Don't remember
+scale1,99,Survey left incomplete 
+scale4,5,They have saved my life
+scale4,4,They have significantly improved my life
+scale4,3,They have had some positive impact on my life
+scale4,2,They have had no impact on my life
+scale4,1,They have made my life worse
+scale4,98,Don't know/Don't remember
+scale4,99,Survey left incomplete 
+scale2,1,1 -  I would definitely not recommend them
+scale2,2,2 -  I would probably not recommend them
+scale2,3,3 -  I am not sure (neutral)
+scale2,4,4 -  I would probably recommend them
+scale2,5,5 -  I would definitely recommend them
+scale2,98,Don't know/Don't remember
+scale2,99,Survey left incomplete 
+scale3,1,1- Not at all
+scale3,2,2- Not very much
+scale3,3,3 - Somewhat
+scale3,4,4 - Mostly yes
+scale3,5,5 - Yes completely
+scale3,98,Don't know/Don't remember
+scale3,99,Survey left incomplete 
+educlevel,1,No schooling
+educlevel,2,Between Class 1 - 8
+educlevel,3,Completed class 8
+educlevel,4,Completed Class 9
+educlevel,5,Completed Class 10
+educlevel,6,Completed Class 11
+educlevel,7,Completed Class 12
+educlevel,8,Completed Diploma
+educlevel,9,Completed Bachelors degree
+educlevel,10,Completed Masters degree
+educlevel,98,Don't know/Don't remember
+educlevel,99,Survey left incomplete 
+time,1,Less than 1 month ago
+time,2,"More than 1 month, but less than 3 months"
+time,3,More than 3 months but less than 6 months
+time,4,More than 6 months but less than 12 months
+time,5,More than 12 months but less than 24 months
+time,6,More than 2 years ago
+time,98,Don't know/Don't remember
+time,99,Survey left incomplete 
+contactinfo,1,Yes can give for 1 person
+contactinfo,2,Yes can give for 2 people
+contactinfo,3,Yes can give for 3 people
+contactinfo,0,No cannot share
+contactinfo,98,Don't know/Don't remember
+contactinfo,99,Survey left incomplete 
+speaktoadult,yes,Yes
+speaktoadult,callback,Call back later
+speaktoadult,diffnumber,Call back on a different number
+speaktoadult,no_one,There is no one
+speaktoadult,self_call,They will call back 
+callback,yes,Yes
+callback,no ,No
+callback,self_call,Respondent said they will call back
+impact_educ_1,Enrolled me in a government or private school,
+impact_educ_2,Gave me guidance on school/college admissions and studies,
+impact_educ_3,Helped me access scholarships,
+impact_educ_4,Conducted classes to improve learning levels ,
+impact_educ_5,Provided vocational skills (including digital skills),
+impact_educ_6,Linked to an existing skilling course,
+impact_educ_7,Provided training in sports and athletics,
+impact_educ_8,"Provided soft/life skills: Creativity, leadership",
+impact_educ_9,"Helped access other government education benefits (such as uniform, tablet, cycle, midday meal)",
+impact_educ_other,Other ,
+impact_aware_1,Protecting the environment,
+impact_aware_2,How to access government benefits,
+impact_aware_3,Gender norms,
+impact_aware_4,Sexual and reproductive health (including menstrual health),
+impact_aware_5,Financial literacy (including cyber fraud) + entrepreneurship,
+impact_aware_6,My rights,
+impact_aware_7,"Social norms: child marriage, caste/religious discrimination, dowry, domestic violence",
+impact_aware_8,Disease prevention and cure,
+impact_aware_9,Nutrition,
+impact_aware_10,Political participation,
+impact_aware_11,Agriculture/farming knowledge,
+impact_aware_other,Other ,
+impact_health_1,"Got access to a government health scheme, entitlement, or worker (e.g. Ayushman Bharat, Janani Suraksha, ASHA worker)",
+impact_health_2,"Got access to hospital, medicine, treatment, vaccination (government or private)",
+impact_health_3,Got support during a medical emergency (including teenage pregnancy),
+impact_health_4,Got access to mental health support or counselling,
+impact_health_5,Improved sexual and reproductive health due to improved awareness,
+impact_health_6,Child's nutrition status improved due to improved awareness,
+impact_health_7,Reduced or stopped alcohol or drug use,
+impact_health_8,Got access to a disability benefits or equipment,
+impact_health_9,Less diseases and risks due to improved access to clean water,
+impact_health_10,Less diseases and risks due to improved access to clean air,
+impact_health_11,Improved health due to increased physical activity/sports,
+impact_health_other,Other ,
+impact_income_1,Got connected to a stable job (formal or informal),
+impact_income_2,Started a business (myself or with others),
+impact_income_3,Support a business venture started by others,
+impact_income_4,Got access to markets to sell produce or goods,
+impact_income_5,Got access to NREGA work and wages ,
+impact_income_6,"Started receiving a government pension (old age, disability, widow)",
+impact_income_7,Got access to a government livelihood scheme,
+impact_income_8,Got access to land and rights (e.g. forest rights) for cultivation/business,
+impact_income_9,Helped access a productive asset which supported livelihood (e.g. sewing machine),
+impact_income_10,Improved productivity due to knowledge/inputs,
+impact_income_11,"Save time due to water access, which I spend on income generating activities",
+impact_income_other,Other ,
+impact_finance_1,Opened a bank account ,
+impact_finance_2,Started saving regularly (e.g. through an SHG or savings group),
+impact_finance_3,Got access to private loan or credit,
+impact_finance_4,"Got access to a government loan scheme (e.g. Mudra, PM SVANidhi)",
+impact_finance_5,Got help managing debt or repaying a loan,
+impact_finance_6,Got access to insurance ,
+impact_finance_other,Other ,
+impact_harm_1,Protected from or supported through domestic violence,
+impact_harm_2,Protected from or supported through sexual harassment or assault,
+impact_harm_3,Prevented or escaped a forced or child marriage,
+impact_harm_4,Protected from or supported through dowry harassment,
+impact_harm_5,Rescued from or prevented trafficking,
+impact_harm_6,Protected from caste-based violence or discrimination,
+impact_harm_7,Protected from religious discrimination or communal violence,
+impact_harm_8,Supported to file a police complaint or FIR for a minor offence,
+impact_harm_9,Supported to file a police complaint or FIR for a major offence,
+impact_harm_10,Got access to a shelter or safe house,
+impact_harm_11,Received compensation as a survivor of violence or crime,
+impact_harm_12,A public space that felt unsafe has been made safer,
+impact_harm_13,Protected from exploitation by an employer or contractor,
+impact_harm_14,Protected and supported in a case of witchcraft ,
+impact_harm_other,Other ,
+impact_confidence_1,I no longer wear a ghungat/wear it less,
+impact_confidence_2,"I have improved mobility (e.g., can go outside the house more often)",
+impact_confidence_3,"Improved decisionmaking (can say ""no"", can weigh in on decisions) ",
+impact_confidence_4,"I speak up more often (in the house, in meetings)",
+impact_confidence_5,"Improved leadership skills (eg public speaking, have taken a leadership role)",
+impact_confidence_6,I feel more respected by my family/peers,
+impact_confidence_7,"I no longer feel ashamed about my caste, religion or identity",
+impact_confidence_8,I am more likely to participate in public events,
+impact_confidence_other,Other ,
+impact_govt_access_1,"Helped with government documents (e.g. Aadhar, ration card, birth certificate, caste certificate)",
+impact_govt_access_2,Helped with PM Awaas application,
+impact_govt_access_3,Helped access Swach Bharat toilet,
+impact_govt_access_4,"Helped access food entitlements (e.g. ration card, PDS access)",
+impact_govt_access_5,Helped with road application ,
+impact_govt_access_6,"Got support navigating the police, courts, or legal system",
+impact_govt_access_7,Won a legal case or received a legal judgment in our favour,
+impact_govt_access_8,Filed an RTI and/or received a response ,
+impact_govt_access_other,Other ,
+impact_water_land_1,Got access to clean drinking water that was not available before,
+impact_water_land_2,Distance to water source has reduced,
+impact_water_land_3,Got access to water for farming or for household needs,
+impact_water_land_4,Got access to land as compensation,
+impact_water_land_5,"Got forest land or produce rights (e.g. NTFP, Forest Rights Act patta)",
+impact_water_land_6,Prevented illegal occupation or grabbing of land,
+impact_water_land_7,Got a land title or ownership document made or corrected,
+impact_water_land_8,Got access to common land that was previously blocked,
+impact_water_land_other,Other ,
+impact_belong_1,Feel less alone or isolated than before (have made new friends),
+impact_belong_2,Feel that people in my community look out for each other,
+impact_belong_3,Feel that I belong to a group that shares my struggles and values,
+impact_belong_4,Feel more hopeful about the future because of the people around me,
+impact_belong_5,Conflict or tension within the community has reduced,
+impact_belong_6,"People from different castes, religions, or backgrounds are mixing more than before",
+impact_belong_other,Other ,
+impact_envir_1,Participated in tree planting or forest conservation,
+impact_envir_2,"Helped protect a water body (e.g. river, pond, wetland)",
+impact_envir_3,Reduced use of chemical fertilisers or pesticides in farming,
+impact_envir_4,Adopted climate-resilient farming practices,
+impact_envir_5,Protected common land or forest from encroachment or destruction,
+impact_envir_6,"Community is better prepared for floods, droughts, heatwaves, other natural disasters",
+impact_envir_7,Got support during or after a natural disaster,
+impact_envir_8,Waste management in the village or neighbourhood has improved,
+impact_envir_9,Air or water pollution in the area has reduced,
+impact_envir_10,Feel better prepared for the climate crisis and its impact on future generations,
+impact_envir_other,Other ,

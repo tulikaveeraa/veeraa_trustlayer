@@ -1,0 +1,59 @@
+unique_id,survey_completion,variable,new_value,reason
+KMWB00017,completed,impact_areas_harm,0,recording check
+KMWB00017,completed,impact_educ_1,0,recording check
+KMWB00017,completed,impact_educ_2,0,recording check
+KMWB00017,completed,impact_confidence_2,0,recording check
+KMWB00017,completed,impact_envir_9,0,recording check
+KMWB00003,completed,impact_areas_health,1,recording check
+KMWB00003,completed,impact_educ_1,0,recording check
+KMWB00003,completed,impact_educ_7,0,recording check
+KMWB00003,completed,impact_educ_8,0,recording check
+KMWB00003,completed,impact_aware_8,0,recording check
+KMWB00003,completed,impact_envir_7,0,recording check
+KMWB00003,completed,impact_health_5,1,recording check
+SSBH00001,completed,impact_income_1,0,nrega wages miscoded as stable job
+SSBH00001,completed,impact_income_5,1,nrega wages miscoded as stable job
+KMWB00019,completed,impact_areas_educ,1,recording check
+KMWB00019,completed,impact_educ_2,1,recording check
+KMWB00019,completed,impact_areas_income,0,recording check
+KMWB00019,completed,impact_income_98,0,recording check
+KMWB00019,completed,impact_areas_govt_access,0,recording check
+KMWB00019,completed,impact_govt_access_3,0,recording check
+KMWB00019,completed,impact_envir_2,0,recording check
+KMWB00019,completed,impact_aware_6,0,recording check
+SBUP00062,completed,frequency_engagement,9,recording check
+KPGJ00014,halfway,impact_educ_99,0,recording check
+KPGJ00014,halfway,impact_educ_2,1,recording check
+KPGJ00014,halfway,impact_areas_confidence,1,recording check
+KPGJ00014,halfway,impact_confidence_2,1,recording check
+KPGJ00087,completed,frequency_engagement,9,recording check
+KPGJ00087,completed,impact_educ_4,0,recording check
+KPGJ00087,completed,impact_educ_2,1,recording check
+KPGJ00087,completed,impact_areas_aware,0,recording check
+KPGJ00087,completed,love2,5,recording check
+SSBH00162,completed,love1,98,recording check
+ASJH00020,completed,depth1,2,no personal impact
+ASJH00020,completed,impact_areas_educ,0,no personal impact
+ASJH00020,completed,impact_areas_aware,0,no personal impact
+KPGJ00001,completed,educ_level,4,recording check
+KPGJ00001,completed,impact_aware_6,1,recording check
+SBUP00003,completed,frequency_engagement,9,recording check
+SBUP00003,completed,impact_areas_aware,1,recording check
+SBUP00003,completed,impact_aware_7,1,recording check
+SBUP00003,completed,impact_areas_income,1,recording check
+SBUP00003,completed,impact_income_1,1,recording check
+SBUP00003,completed,impact_areas_govt_access,1,recording check
+SBUP00003,completed,impact_govt_access_3,1,recording check
+SBUP00003,completed,impact_areas_belong,1,recording check
+SBUP00003,completed,impact_belong_6,1,recording check
+SBUP00003,completed,impact_water_land_other,0,recording check
+SBUP00003,completed,impact_water_land_3,0,recording check
+SBUP00003,completed,impact_harm_4,0,recording check
+SSBH00001,completed,love1,5,recording check
+SSBH00010,completed,love1,5,recording check
+SSBH00009,completed,love1,5,recording check
+KPGJ00036,completed,depth1,2,dq check
+KPGJ00008,completed,depth1,2,dq check
+KPGJ00037,completed,depth1,2,dq check
+KPGJ00006,completed,depth1,2,dq check
+KPGJ00068,completed,depth1,2,dq check
