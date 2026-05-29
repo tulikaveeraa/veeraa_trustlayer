@@ -19,5 +19,5 @@ tl4_analysis2 <- read_rds("data/tl4_analysis2.rds")
 
 demographics <- tl4_analysis2 |> 
   filter(active == 1) |> 
-  
+  group_by(leader) 
   
